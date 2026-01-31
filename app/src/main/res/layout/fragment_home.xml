@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@id/emotion_button1"
         android:layout_centerHorizontal="true"
-        android:layout_margin="16dp"
+        android:layout_margin="8dp"
         android:text="Log your emotions!"
         android:textSize="30dp" />
 
@@ -19,17 +19,19 @@
         android:id="@+id/emotion_button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Happy"
+        android:text="😄"
+        android:textSize="30sp"
         android:layout_above="@id/emotion_button2"
         android:layout_centerHorizontal="true"
-        android:layout_margin="16dp"/>
+        android:layout_margin="8dp"/>
 
     <Button
         android:id="@+id/emotion_button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sad"
-        android:layout_margin="16dp"
+        android:text="🙁"
+        android:textSize="30sp"
+        android:layout_margin="8dp"
         android:layout_above="@id/emotion_button3"
         android:layout_centerHorizontal="true"/>
 
@@ -37,8 +39,9 @@
         android:id="@+id/emotion_button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Angry"
-        android:layout_margin="16dp"
+        android:text="😡"
+        android:textSize="30sp"
+        android:layout_margin="8dp"
         android:layout_above="@id/emotion_button4"
         android:layout_centerHorizontal="true"/>
 
@@ -46,16 +49,18 @@
         android:id="@+id/emotion_button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Scared"
-        android:layout_margin="16dp"
+        android:text="😨"
+        android:textSize="30sp"
+        android:layout_margin="8dp"
         android:layout_centerInParent="true"/>
 
     <Button
         android:id="@+id/emotion_button5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Surprised"
-        android:layout_margin="16dp"
+        android:text="😲"
+        android:textSize="30sp"
+        android:layout_margin="8dp"
         android:layout_below="@id/emotion_button4"
         android:layout_centerHorizontal="true"/>
 
@@ -63,8 +68,9 @@
         android:id="@+id/emotion_button6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Disgust"
-        android:layout_margin="16dp"
+        android:text="🤢"
+        android:textSize="30sp"
+        android:layout_margin="8dp"
         android:layout_below="@id/emotion_button5"
         android:layout_centerHorizontal="true"/>
 
@@ -72,8 +78,9 @@
         android:id="@+id/emotion_button7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tired"
-        android:layout_margin="16dp"
+        android:text="😴"
+        android:textSize="30sp"
+        android:layout_margin="8dp"
         android:layout_below="@id/emotion_button6"
         android:layout_centerHorizontal="true"/>
 </RelativeLayout>
