@@ -16,14 +16,10 @@ public class ViewPagerAdapter extends FragmentStateAdapter {
     @Override
     public Fragment createFragment(int position) {
         switch (position){
-            case 0:
-                return new HomeFragment();
-            case 1:
-                return new LogsFragment();
-            case 2:
-                return new SummaryFragment();
-            default:
-                return new HomeFragment();
+            case 0: return new HomeFragment();
+            case 1: return new LogsFragment();
+            case 2: return new SummaryFragment();
+            default: throw new IllegalStateException("Invalid position");
         }
     }
 

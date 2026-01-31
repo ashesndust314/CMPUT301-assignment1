@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
     tools:context=".HomeFragment">
 
     <TextView
         android:id="@+id/home_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/emotion_button1"
-        android:layout_centerHorizontal="true"
         android:layout_margin="8dp"
         android:text="Log your emotions!"
         android:textSize="30dp" />
@@ -21,8 +22,6 @@
         android:layout_height="wrap_content"
         android:text="😄"
         android:textSize="30sp"
-        android:layout_above="@id/emotion_button2"
-        android:layout_centerHorizontal="true"
         android:layout_margin="8dp"/>
 
     <Button
@@ -31,9 +30,7 @@
         android:layout_height="wrap_content"
         android:text="🙁"
         android:textSize="30sp"
-        android:layout_margin="8dp"
-        android:layout_above="@id/emotion_button3"
-        android:layout_centerHorizontal="true"/>
+        android:layout_margin="8dp" />
 
     <Button
         android:id="@+id/emotion_button3"
@@ -41,9 +38,7 @@
         android:layout_height="wrap_content"
         android:text="😡"
         android:textSize="30sp"
-        android:layout_margin="8dp"
-        android:layout_above="@id/emotion_button4"
-        android:layout_centerHorizontal="true"/>
+        android:layout_margin="8dp" />
 
     <Button
         android:id="@+id/emotion_button4"
@@ -51,8 +46,7 @@
         android:layout_height="wrap_content"
         android:text="😨"
         android:textSize="30sp"
-        android:layout_margin="8dp"
-        android:layout_centerInParent="true"/>
+        android:layout_margin="8dp" />
 
     <Button
         android:id="@+id/emotion_button5"
@@ -60,9 +54,7 @@
         android:layout_height="wrap_content"
         android:text="😲"
         android:textSize="30sp"
-        android:layout_margin="8dp"
-        android:layout_below="@id/emotion_button4"
-        android:layout_centerHorizontal="true"/>
+        android:layout_margin="8dp" />
 
     <Button
         android:id="@+id/emotion_button6"
@@ -70,9 +62,7 @@
         android:layout_height="wrap_content"
         android:text="🤢"
         android:textSize="30sp"
-        android:layout_margin="8dp"
-        android:layout_below="@id/emotion_button5"
-        android:layout_centerHorizontal="true"/>
+        android:layout_margin="8dp" />
 
     <Button
         android:id="@+id/emotion_button7"
@@ -80,7 +70,14 @@
         android:layout_height="wrap_content"
         android:text="😴"
         android:textSize="30sp"
-        android:layout_margin="8dp"
-        android:layout_below="@id/emotion_button6"
-        android:layout_centerHorizontal="true"/>
-</RelativeLayout>
+        android:layout_margin="8dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/edit_buttons_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:src="@android:drawable/ic_menu_edit"
+        android:layout_margin="8dp"/>
+
+</LinearLayout>
