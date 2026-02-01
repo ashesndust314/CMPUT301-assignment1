@@ -31,8 +31,8 @@ public class EmotionArrayAdapter extends ArrayAdapter<Emotion> {
         }
 
         Emotion emotion = getItem(position);
-        TextView emotionName = view.findViewById(R.id.city_text);
-        TextView timestamp = view.findViewById(R.id.province_text);
+        TextView emotionName = view.findViewById(R.id.emote_text);
+        TextView timestamp = view.findViewById(R.id.timestamp_text);
 
         emotionName.setText(emotion.getEmotion());
         timestamp.setText(emotion.getTimestamp());

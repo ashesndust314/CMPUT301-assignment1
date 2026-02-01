@@ -22,6 +22,7 @@ public class HomeFragment extends Fragment implements EditButtonsFragment.EditBu
     private Button emotButton5;
     private Button emotButton6;
     private Button emotButton7;
+    private FloatingActionButton fab;
     @Override
     public void editButtons(ArrayList<String> emotes) {
         if (!emotes.get(0).isEmpty()){ emotButton1.setText(emotes.get(0)); }
@@ -39,7 +40,7 @@ public class HomeFragment extends Fragment implements EditButtonsFragment.EditBu
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
-        SharedViewModel vm = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
+        EmoteSharedData vm = new ViewModelProvider(requireActivity()).get(EmoteSharedData.class);
 
         emotButton1 = view.findViewById(R.id.emotion_button1);
         emotButton2 = view.findViewById(R.id.emotion_button2);
@@ -57,7 +58,7 @@ public class HomeFragment extends Fragment implements EditButtonsFragment.EditBu
         emotButton6.setOnClickListener(v -> vm.addEmot(new Emotion(emotButton6.getText().toString())));
         emotButton7.setOnClickListener(v -> vm.addEmot(new Emotion(emotButton7.getText().toString())));
 
-        FloatingActionButton fab = view.findViewById(R.id.edit_buttons_fab);
+        fab = view.findViewById(R.id.edit_buttons_fab);
         fab.setOnClickListener(v -> {
             new EditButtonsFragment().show(getChildFragmentManager(), "Edit Buttons");
         });

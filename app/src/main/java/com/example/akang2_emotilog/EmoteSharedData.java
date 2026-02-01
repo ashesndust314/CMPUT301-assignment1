@@ -7,13 +7,11 @@ import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 import java.util.ArrayList;
-import java.util.Dictionary;
 import java.util.HashMap;
-import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
 
-public class SharedViewModel extends ViewModel {
+public class EmoteSharedData extends ViewModel {
     private MutableLiveData<List<Emotion>> dataList = new MutableLiveData<>(new ArrayList<>());
     private final MutableLiveData<Map<String, Integer>> emotCount = new MutableLiveData<>(new HashMap<>());
     public LiveData<List<Emotion>> getItems(){ return dataList; }

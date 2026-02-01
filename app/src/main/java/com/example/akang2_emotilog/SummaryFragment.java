@@ -9,12 +9,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.Map;
 
 public class SummaryFragment extends Fragment {
+    private EmoteSharedData vm;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -22,7 +23,7 @@ public class SummaryFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_summary, container, false);
         LinearLayout sum_container = view.findViewById(R.id.summary_container);
 
-        SharedViewModel vm = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
+        vm = new ViewModelProvider(requireActivity()).get(EmoteSharedData.class);
 
         vm.getCounts().observe(getViewLifecycleOwner(), counts -> {
             sum_container.removeAllViews();
