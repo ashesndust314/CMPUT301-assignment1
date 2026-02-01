@@ -12,12 +12,12 @@ import java.util.List;
 import java.util.Map;
 
 public class EmoteSharedData extends ViewModel {
-    private MutableLiveData<List<Emotion>> dataList = new MutableLiveData<>(new ArrayList<>());
+    private MutableLiveData<ArrayList<Emotion>> dataList = new MutableLiveData<>(new ArrayList<>());
     private final MutableLiveData<Map<String, Integer>> emotCount = new MutableLiveData<>(new HashMap<>());
-    public LiveData<List<Emotion>> getItems(){ return dataList; }
+    public LiveData<ArrayList<Emotion>> getItems(){ return dataList; }
     public LiveData<Map<String, Integer>> getCounts(){ return emotCount; }
     public void addEmot(Emotion emot){
-        List<Emotion> current = new ArrayList<>(dataList.getValue());
+        ArrayList<Emotion> current = new ArrayList<>(dataList.getValue());
         current.add(emot);
         dataList.setValue(current);
         Log.i("Emotion Added", "Added emotion" + emot.getEmotion());

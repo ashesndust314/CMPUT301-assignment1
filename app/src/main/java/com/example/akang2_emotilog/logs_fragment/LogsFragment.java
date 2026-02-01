@@ -11,10 +11,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
+import com.example.akang2_emotilog.Emotion;
 import com.example.akang2_emotilog.R;
 import com.example.akang2_emotilog.EmoteSharedData;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class LogsFragment extends Fragment {
     private EmotionArrayAdapter emotAdapter;
@@ -36,6 +38,8 @@ public class LogsFragment extends Fragment {
 
         vm.getItems().observe(getViewLifecycleOwner(), emots -> {
             Log.d("Observer", "List size: " + emots.size());
+            Log.d("ListDebug",
+                    "Adapter count = " + emotAdapter.getCount());
             emotAdapter.clear();
             emotAdapter.addAll(emots);
             emotAdapter.notifyDataSetChanged();
